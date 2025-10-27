@@ -9,28 +9,6 @@
   </head>
  <!-- Sentry Browser SDK with tracing & replay -->
 <script
-  src="https://browser.sentry-cdn.com/7.120.0/bundle.tracing.replay.min.js"
-  integrity="sha384-xb3kE9z1EXAMPLEHASHONLY-DO-NOT-COPY-THIS"
- R_PUBLIC_KEY@oYOUR_ORG_ID.ingest.sentry.io/YOUR_PROJECT_ID",
-    integrations: [
-      new Sentry.BrowserTracing({
-        // Include your own API hosts here to trace XHR/fetch
-        tracePropagationTargets: [/^https?:\/\/localhost(:\d+)?\//, /^\//]
-      }),
-      new Sentry.Replay(), // remove if you don't want session replay
-    ],
-
-    // Sampling — set low values in production; for testing keep them high
-    tracesSampleRate: 1.0,
-    replaysSessionSampleRate: 0.1,
-    replaysOnErrorSampleRate: 1.0,
-
-    // Turn on verbose SDK logs in the console while debugging
-    debug: true
-  });
-
-  // Quick manual test: send a test event on load
-  Sentry.captureMessage("Sentry wired up on index.html ✅", "info");
     // --- Helpers -------------------------------------------------------------
 
   // Read and normalize your form values.
